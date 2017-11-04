@@ -1,9 +1,19 @@
 import React from "react";
 
+const styles = {
+  line: {
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: 10,
+    borderColor: "lightgrey",
+    padding: 25
+  }
+};
+
 const Search = props =>
   <div className="container">
     <div className="row">
-      <div className="col-lg-12">
+      <div className="col-lg-12" style={styles.line}>
         <div className="panel panel-primary">
           <div className="panel-heading">
             <h3 className="panel-title text-center">
@@ -26,7 +36,7 @@ const Search = props =>
                 <label htmlFor="end-year">End Year</label>
                 <input onChange={props.handleEndYearChange} type="text" className="form-control" id="end-year" />
               </div>
-              <button onClick={props.handleFormSubmit} type="submit" className="btn btn-primary">Submit</button>
+              <button onClick={props.handleFormSubmit} type="submit" className="btn btn-lg btn-outline-primary">SUBMIT</button>
             </form>
           </div>
         </div>
@@ -38,7 +48,7 @@ const Search = props =>
     <div className="row">
       <div className="col-lg-12">
         <div className="panel panel-primary">
-          <div className="panel-heading">
+          <div className="panel-heading" style={styles.line}>
             <h3 className="panel-title text-center">
               <strong>
                 Results

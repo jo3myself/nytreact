@@ -4,6 +4,16 @@ import Search from "../../components/Search";
 import Results from "../../components/Results";
 import API from "../../utils/API";
 
+const styles = {
+  line: {
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: 10,
+    borderColor: "lightgrey",
+    padding: 25
+  }
+};
+
 class Articles extends Component {
 
   state = {
@@ -108,7 +118,7 @@ class Articles extends Component {
     return (
 
       <div className="main-container">
-        <div className="container">
+        <div className="container-fluid">
           <div className="jumbotron">
             <h1 className="text-center"><u><strong>New York Times Article Scrubber</strong></u></h1>
             <h4 className="text-center">Search for and annotate articles of interest!</h4>
@@ -126,7 +136,7 @@ class Articles extends Component {
             <div className="row">
               <div className="col-lg-12">
                 <div className="panel panel-primary">
-                  <div className="panel-heading">
+                  <div className="panel-heading" style={styles.line}>
                     <h3 className="panel-title text-center">
                       <strong>
                         Saved Articles
